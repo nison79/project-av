@@ -9,8 +9,12 @@ import { ServicesComponent } from './services/services.component';
 import { ActionsComponent } from './actions/actions.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
-import { PageNotComponent } from './page-not/page-not.component';
+
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
+
+import { HttpClientModule } from '@angular/common/http';
+import { GetRequestComponent } from './get-request/get-request.component';
+
 
 @NgModule({
   declarations: [
@@ -21,8 +25,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ActionsComponent,
     HomeComponent,
     UserComponent,
-    PageNotComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    GetRequestComponent
   ],
   imports: [
     BrowserModule,
@@ -32,9 +36,12 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
       { path: 'actions' , component: ActionsComponent},
       { path: 'user' ,component: UserComponent },
       {path: '**', component: PageNotFoundComponent}
-    ])
+    ]),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }
