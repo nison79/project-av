@@ -1,0 +1,18 @@
+.actions {
+  font-family: "Ubuntu" ,sans-serif;
+  padding:2rem;
+  display: flex;
+  flex-direction: column;
+  gap:4rem;
+  background-color: #eee;
+}
+
+.actions h2 {
+  color:blueviolet;
+  
+}
+
+.actions p {
+  text-transform: uppercase;
+}
+

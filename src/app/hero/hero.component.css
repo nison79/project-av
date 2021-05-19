@@ -1,0 +1,33 @@
+section {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  min-height: 92vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+}
+
+main .box-title{
+  padding:1rem;
+}
+
+
+main h1 {
+  font-family: 'Ubuntu' , sans-serif;
+  font-size: 3rem;
+}
+
+aside {
+  display: flex;
+  align-items: center;
+  background-color: rgb(223, 175, 117);
+  font-family: 'Ubuntu' , sans-serif;
+}
+
+aside .info {
+  padding:1rem;
+}
