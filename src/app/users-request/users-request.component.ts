@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'users-request',
@@ -8,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersRequestComponent implements OnInit {
   users: any;
+  router: Router;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient ,_router: Router) {
+    this.router = _router;
+   }
 
   ngOnInit(): void {
     this.http.get<any>
@@ -17,6 +21,10 @@ export class UsersRequestComponent implements OnInit {
       }
       )
       console.log(this.users);
+  }
+
+  backToHome() {
+    this.router.navigateByUrl('/') 
   }
 
 }

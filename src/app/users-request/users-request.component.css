@@ -24,12 +24,14 @@ img {
 section {
   font-family: 'Ubuntu';
   display: grid;
-  grid-template-columns: repeat(3 ,1fr);
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  flex-wrap: wrap;
 }
 
 .user {
   margin:1rem;
   padding:2rem;
+  width:400px;
   background-color: azure;
 }
 
@@ -45,4 +47,19 @@ span {
   
   font-size: 0.7rem;
   margin-left:0.7rem;
+}
+
+button{
+  width:200px;
+  height:60px;
+  background-color: blueviolet;
+  color:white;
+  font-family: 'Ubuntu';
+  font-weight:700;
+  font-size:1.5rem;
+  text-transform: uppercase;
+  border:none;
+  border-radius: 10px;
+  margin-left: 2rem;
+  cursor:pointer;
 }
